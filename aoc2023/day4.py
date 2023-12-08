@@ -7,8 +7,6 @@ with open(base_dir / filename) as f:
     lines = f.read().splitlines()
 
 score = 0
-
-extra_cards = [0 for _ in lines]
 n_cards = [1 for _ in lines]
 
 for i, line in enumerate(lines):
@@ -25,7 +23,7 @@ for i, line in enumerate(lines):
         score += 2 ** (n_matches - 1)
 
     j = i + 1
-    for _ in range(n_matches):
+    for __ in range(n_matches):
         if j >= len(lines):
             break
         n_cards[j] += n_cards[i]
