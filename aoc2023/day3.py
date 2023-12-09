@@ -6,7 +6,7 @@ base_dir = pathlib.Path(__file__).parent
 with open(base_dir / "day3_input.txt") as f:
     lines = f.read().splitlines()
 
-part_numbers = []
+part_numbers: list[int] = []
 
 not_symbols = ".0123456789"
 

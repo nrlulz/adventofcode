@@ -37,13 +37,13 @@ class Game:
         )
 
 
-games = []
+games: list[Game] = []
 
 for line in lines:
     game_id, rest = line.split(":")
     _, game_id = game_id.split()
 
-    subsets = []
+    subsets: list[GameSubset] = []
 
     for subset in rest.split("; "):
         kwargs = {
