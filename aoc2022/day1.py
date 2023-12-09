@@ -1,7 +1,7 @@
 with open("2022_1.txt") as f:
     input_lines = f.readlines()
 
-calories_by_elf = []
+calories_by_elf: list[int] = []
 running_total = 0
 
 for line in input_lines:
